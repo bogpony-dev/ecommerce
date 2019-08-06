@@ -9,7 +9,8 @@
 		"dev": "webpack-dev-server",
 		"initialize": "babel-node src/server/initialize-db",
 		"server": "babel-node src/server/server",
-		"server-test": "babel-node src/server/server.spec"
+		"server-test": "babel-node src/server/server.spec",
+		"start-dev": "concurrently \"npm run server\" \"npm run dev\""
 	},
 	"keywords": [],
 	"author": "",
@@ -22,6 +23,7 @@
 		"@babel/register": "^7.5.5",
 		"babel-loader": "^8.0.6",
 		"body-parser": "^1.19.0",
+		"concurrently": "^4.1.1",
 		"cors": "^2.8.5",
 		"express": "^4.17.1",
 		"mongodb": "^3.3.0-beta2",
@@ -30,10 +32,12 @@
 		"webpack-dev-server": "^3.7.2"
 	},
 	"dependencies": {
+		"axios": "^0.19.0",
 		"history": "^4.9.0",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6",
 		"react-redux": "^7.1.0",
+		"react-router": "^5.0.1",
 		"react-router-dom": "^5.0.1",
 		"redux": "^4.0.4",
 		"redux-logger": "^3.0.6",
